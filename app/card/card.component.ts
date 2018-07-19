@@ -1,14 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
-import { Task } from '../model/task';
+import { Task } from "../model/task";
 
-@Component( { 
+@Component( {
   moduleId: module.id,
-  selector: 'app-card',
-  templateUrl: 'card.component.html',
-  styleUrls: [ 'card.component.css' ]
+  selector: "app-card",
+  styleUrls: [ "card.component.css" ],
+  templateUrl: "card.component.html",
 } )
 
-export class CardComponent { 
-  @Input() task: Task;
+export class CardComponent {
+  @Input()
+
+  private task: Task;
+
+  public statusToggle(  ) {
+    this.task.completed = !this.task.completed;
+  }
 }

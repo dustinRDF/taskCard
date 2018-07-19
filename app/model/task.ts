@@ -1,6 +1,6 @@
 export class Task {
-  constructor ( 
+  constructor(
     public content: string,
-    public completed: boolean
+    public completed: boolean,
   ) {  }
 }

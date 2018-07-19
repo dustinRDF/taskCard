@@ -1,20 +1,20 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppComponent } from './app.component';
-import { CardComponent } from './card/card.component';
+import { AppComponent } from "./app.component";
+import { CardComponent } from "./card/card.component";
 
-@NgModule( { 
-  imports: [ 
-    BrowserModule,
-    FormsModule
-  ],
-  declarations: [ 
+@NgModule( {
+  bootstrap: [ AppComponent ],
+  declarations: [
     AppComponent,
-    CardComponent 
+    CardComponent,
   ],
-  bootstrap: [ AppComponent ]
+  imports: [
+    BrowserModule,
+    FormsModule,
+  ],
 } )
 
-export class AppModule {  } 
+export class AppModule {  }
